@@ -11,8 +11,8 @@ Pretty straight forward:
 5. PROFIT!
 
 ```
-git clone https://github.com/cfultz/quota-script
+git clone https://github.com/cfultz/NRAOQuota
 cd quota-script
-chmod +x quota.sh
+chmod +x quotafinder.sh
 ./quota.sh
 ```
