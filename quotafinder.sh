@@ -42,7 +42,8 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo "Even if it doesn't look like it's working, it is!"
             echo
             echo If you dont see anything, nothing has changed!
-            find $HOME -mtime 1 -not -path '/.*'
+            find $HOME -mtime 1 -not -path '/.*' > $HOME/filesmodified24h.txt
+            cat $HOME/filesmodified24h.txt
             echo
             echo 
             read -n 1 -s -r -p "Press any key to continue"
