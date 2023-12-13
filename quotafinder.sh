@@ -32,7 +32,7 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo "Even if it doesn't look like it's working, it is!"
             echo
             echo "There may be 'Permision denied' errors if files/directories aren't owned by" $USER
-            find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
+            find $HOME -type f -printf '%s %p\n' | sort -nr | head -10 | numfmt --to=iec
             echo
             read -n 1 -s -r -p "Press any key to continue"
             echo
@@ -42,7 +42,7 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo "Even if it doesn't look like it's working, it is!"
             echo
             echo If you dont see anything, nothing has changed!
-            find /home/$USER -mtime 1 -not -path '/*.*'
+            find $HOME -mtime 1 -not -path '/.*'
             echo
             echo 
             read -n 1 -s -r -p "Press any key to continue"
