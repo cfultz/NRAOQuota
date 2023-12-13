@@ -20,6 +20,7 @@ echo
 echo "Press x to exit the script"
 read -n 1 -s -r -p "Input Selection:" mainmenuinput
   if [ "$mainmenuinput" = "1" ]; then
+            clear
             echo 
             echo 
             quota -s -u --show-mntpoint
@@ -28,16 +29,18 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo
             mainmenu
         elif [ "$mainmenuinput" = "2" ]; then
+            clear
             echo This will take a bit...
             echo "Even if it doesn't look like it's working, it is!"
             echo
             echo "There may be 'Permision denied' errors if files/directories aren't owned by" $USER
-            find $HOME -type f -printf '%s %p\n' | sort -nr | head -10 | numfmt --to=iec
+            find $HOME -type f -printf '%s %p\n' | sort -nr | head -20 | numfmt --to=iec
             echo
             read -n 1 -s -r -p "Press any key to continue"
             echo
             mainmenu
         elif [ "$mainmenuinput" = "3" ]; then
+            clear
             echo This will take a bit...
             echo "Even if it doesn't look like it's working, it is!"
             echo
