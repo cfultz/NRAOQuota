@@ -42,7 +42,7 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo "Even if it doesn't look like it's working, it is!"
             echo
             echo If you dont see anything, nothing has changed!
-            find /users/$USER -mtime 1 -not -path '/*.*'
+            find /home/$USER -mtime 1 -not -path '/*.*'
             echo
             echo 
             read -n 1 -s -r -p "Press any key to continue"
