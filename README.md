@@ -14,7 +14,7 @@ Pretty straight forward:
 git clone https://github.com/cfultz/NRAOQuota
 cd quota-script
 chmod +x quotafinder.sh
-./quota.sh
+./quotafinder.sh
 ```
 
 ## What do the options do?
