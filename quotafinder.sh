@@ -49,7 +49,7 @@ read -n 1 -s -r -p "Input Selection:" mainmenuinput
             echo "This will take a bit..."
             echo "Even if it doesn't look like it's working, it is!"
             echo
-            find $HOME -mtime 1 -not -path '*/.*' 2>&1 | grep -v "Permission denied" | sort -nr |  numfmt --to=iec
+            find $HOME -mtime 1 -not -path '*/.*' 2>&1 | grep -v "Permission denied" | sort -nr >> $HOME/ModifiedFiles24h.txt
             echo "If you dont see anything, nothing has changed!"
             echo
             read -n 1 -s -r -p "Press any key to continue"
